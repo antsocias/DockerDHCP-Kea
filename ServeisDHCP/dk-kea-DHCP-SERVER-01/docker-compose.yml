@@ -1,14 +1,12 @@
-version: '3'
-
 services:
-  dhcp-hospitalbinissalem:
+  dhcp-viralup:
     build:
       context: ..
       dockerfile: dhcp.Dockerfile
-    container_name: dk-kea-DHCP-SERVER01
+    container_name: Docker-DHCP
     networks:
       kea-10-ipvlan: # network that binds container to host network interface.
-        ipv4_address: 172.16.21.40 # ip for kea4 server
+        ipv4_address: 172.16.21.34 # ip for kea4 server
     ports:
       - 67:67/udp
       - 67:67/tcp
